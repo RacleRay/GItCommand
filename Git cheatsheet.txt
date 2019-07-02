@@ -1,5 +1,4 @@
-
-$ git status                                    # 检查文件当前的状态
+﻿$ git status                                    # 检查文件当前的状态
 $ git add [文件名]                               # 追踪新的文件
 $ git diff --cached                             # 若要看已经暂存起来的文件和上次提交时的快照之间的差异
 $ git commit -m "Story 182: Fix benchmark"      # 用一行命令提交更新
@@ -10,14 +9,19 @@ $ git mv file_from file_to                      # 移动文件/重命名文件
 ------------------------------关联远程仓库------------------------------
 
 $ git init                                      # 初始化这个本地的文件夹为一个Git可以管理的仓库
-$ git remote add origin git@[地址]               # 将本地的仓库和远程的仓库进行关联
+$ git remote add origin https://[地址]               # 将本地的仓库和远程的仓库进行关联
+$ git pull <远程主机名> <远程分支名>:<本地分支名>   # git pull origin master:master
 $ git add
 $ git commit -m
 $ git push -u origin master(首次关联加u，后续不用)
 $ git push origin master
-$ git pull <远程主机名> <远程分支名>:<本地分支名>
 $ git clone https://github.com/。。。
 
+
+$ git rm --cached "文件路径"，不删除物理文件，仅将该文件从缓存中删除
+$ git rm --f "文件路径"，不仅将该文件从缓存中删除，还会将物理文件删除（不会回收到垃圾桶）
+$ git commit -m "delete file"
+$ git push
 ------------------------------branch------------------------------
 $ git branch                                    # 查看分支
 $ git branch -v                                 # 查看各分支最后一个提交对象
